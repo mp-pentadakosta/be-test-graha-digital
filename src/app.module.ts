@@ -10,7 +10,7 @@ import { appModuleService } from './services/app.module.service';
 import { appModuleRepository } from './repository/app.module.repository';
 import { appModelIntegration } from './integration/app.model.integration';
 import { AxiosInterceptorCore } from './core/axios.interceptor.core';
-import { RedisModuleData } from './redis/redis.module';
+// import { RedisModuleData } from './redis/redis.module';
 import { PrismaClientExceptionFilter, PrismaModule } from 'nestjs-prisma';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { APP_FILTER, HttpAdapterHost } from '@nestjs/core';
@@ -51,7 +51,7 @@ import { appModuleUtils } from './utils/app.module.utils';
       }),
     }),
     ScheduleModule.forRoot(),
-    RedisModuleData,
+    // RedisModuleData,
   ],
   controllers: appModuleController,
   providers: [
