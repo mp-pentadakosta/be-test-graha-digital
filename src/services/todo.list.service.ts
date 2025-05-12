@@ -35,6 +35,7 @@ export class TodoListService {
     const resp = await this.todoListRepository.addTodoList({
       description: data.description,
       title: data.title,
+      groupName: data.groupName,
     });
 
     if (!resp) {

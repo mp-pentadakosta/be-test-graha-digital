@@ -6,6 +6,10 @@ export class AddTodoListDto {
   @IsNotEmpty({ message: `Title is required` })
   @IsString({ message: `Title must be a string` })
   title: string;
+  @ApiProperty({ description: 'Group Name' })
+  @IsNotEmpty({ message: `Group Name is required` })
+  @IsString({ message: `Group Name must be a string` })
+  groupName: string;
   @ApiProperty({ description: 'Description' })
   @IsString({ message: `Description must be a string` })
   @IsOptional()

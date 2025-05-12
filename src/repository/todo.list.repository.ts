@@ -24,11 +24,16 @@ export class TodoListRepository {
     });
   }
 
-  async addTodoList(data: { title: string; description?: string }) {
+  async addTodoList(data: {
+    title: string;
+    description?: string;
+    groupName: string;
+  }) {
     return this.prismaService.todoList.create({
       data: {
         title: data.title,
         description: data.description,
+        groupName: data.groupName,
       },
     });
   }
